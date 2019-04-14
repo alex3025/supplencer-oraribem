@@ -1,2 +1,2 @@
-# supplencer-oraribem
-A medium project by me.
+# Orari BEM - Supplencer
+A medium project by me!
