@@ -1,0 +1,413 @@
+a {
+    text-decoration: none;
+}
+
+.title {
+    position: fixed;
+    top: 15px;
+    left: 65px;
+    font-family: 'Nunito', sans-serif
+}
+
+.login-title {
+    position: fixed;
+    top: 15px;
+    left: 65px;
+    font-family: 'Nunito', sans-serif
+}
+
+.credits {
+    position: fixed;
+    top: 38px;
+    left: 235px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+}
+
+.sign {
+    position: fixed;
+    top: 55px;
+    left: 493px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    color: grey;
+}
+
+.version {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    color: grey;
+}
+
+.sign:visited {
+    color: grey;
+}
+
+.sign:hover {
+    color: black;
+}
+
+.logo {
+    position: fixed;
+    top: 37px;
+    left: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.bar {
+    position: fixed;
+    top: 70px;
+    left: 30px;
+    color: black;
+    width: 500px;
+}
+
+.button {
+    position: fixed;
+    top: 83px;
+    left: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 3px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.button2 {
+    background-color: #DCDCDC; 
+    color: black; 
+    border: 2px solid #DCDCDC;
+}
+
+.button2:hover {
+    background-color: white;
+    color: black;
+}
+
+.back_button{
+    position: fixed;
+    top: 43px;
+    left: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: grey;
+    width: 25px;
+    height: 25px;
+    line-height: 120px;
+    border-radius: 50%;
+    border: solid 2px #c7c7c7;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.back_button:hover{
+    background: white;
+    color: #ff3d3d;
+    border: solid 2px grey;
+}
+
+.arrow-icon {
+    position: fixed;
+    top: 49.5px;
+    left: 37px;
+}
+
+.sign-label {
+    position: fixed;
+    top: 70px;
+    left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20;
+}
+
+.passwordShow {
+    position: fixed;
+    top: 193px;
+    left: 247px;
+}
+    
+.showPasswordLabel {
+    position: fixed;
+    top: 175px;
+    left: 267px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16;
+}
+
+.username {
+    position: fixed;
+    top: 145px;
+    left: 30px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 20px;
+    border-color: #DCDCDC;
+    padding: 5;
+    margin: 1;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    height: 30px;
+    width: 210px
+}
+
+.password {
+    position: fixed;
+    top: 187px;
+    left: 30px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 20px;
+    border-color: #DCDCDC;
+    padding: 5;
+    margin: 1;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    height: 30px;
+    width: 210px
+}
+
+.sign-button {
+    position: fixed;
+    top: 255px;
+    left: 30px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.sign-button2 {
+    background-color: #DCDCDC; 
+    color: black; 
+    border: 2px solid #DCDCDC;
+}
+
+.sign-button2:hover {
+    background-color: white;
+    color: black;
+}
+
+.password-lost-tooltip {
+    display: inline-block;
+    position: fixed;
+    top: 55px;
+    left: 375px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    color: grey;
+}
+
+.password-lost-tooltip:visited {
+    color: grey;
+}
+
+.password-lost-tooltip:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.signed-label {
+    position: fixed;
+    top: 85px;
+    left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20;
+}
+
+.classes-label {
+    position: fixed;
+    top: 126px;
+    left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20;
+}
+
+.classes {
+    position: fixed;
+    top: 145px;
+    left: 100px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    width: 120;
+    height: 30;
+    border-radius: 2px;
+}
+
+.day-label {
+    position: fixed;
+    top: 176px;
+    left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20;
+}
+
+.day {
+    position: fixed;
+    top: 195px;
+    left: 100px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    width: 120;
+    height: 30;
+    border-radius: 2px;
+}
+
+.hour-label {
+    position: fixed;
+    top: 226px;
+    left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20;
+}
+
+.hour {
+    position: fixed;
+    top: 245px;
+    left: 100px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15;
+    width: 120;
+    height: 30;
+    border-radius: 2px;
+}
+
+.search-button {
+    position: fixed;
+    top: 330px;
+    left: 30px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-button2 {
+    background-color: #DCDCDC; 
+    color: black; 
+    border: 2px solid #DCDCDC;
+}
+
+.search-button2:hover {
+    background-color: white;
+    color: black;
+}
+
+.search-errors {
+    position: fixed;
+    top: 176px;
+    left: 231px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14;
+    color: #ff3d3d;
+    display: none;
+
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 0.52.0.5 */
+       -moz-animation: fadein 0.5s; /* Firefox < 0.56 */
+        -ms-animation: fadein 0.5s; /* Internet Explorer */
+         -o-animation: fadein 0.5s; /* Opera < 0.52.0.5 */
+            animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.logout-button {
+    position: fixed;
+    top: 255px;
+    left: 145px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logout-button2 {
+    background-color: #DCDCDC; 
+    color: black; 
+    border: 2px solid #DCDCDC;
+}
+
+.logout-button2:hover {
+    background-color: white;
+    color: black;
+}

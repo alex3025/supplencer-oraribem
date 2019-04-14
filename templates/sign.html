@@ -1,0 +1,92 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108834617-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108834617-4');
+    </script>
+    
+    <title>Orari BEM | Supplencer - Firma</title>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="48x48" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="62x62" type="image/png">
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=0.65">
+    <h1 class="login-title">Firma</h1>
+    <hr class='bar'>
+    <a href="{{ url_for('index') }}" class="back_button"><i class="arrow-icon fas fa-arrow-left"></i></a>
+
+    <p class="password-lost-tooltip"><a href="mailto:
+matteo.diblas@isisbem.it?subject=RICHIESTA CAMBIO PASSWORD | SUPPLENCER BEM&body=Richiesta cambio password%0A%0A
+Username: {{username}}%0A
+E-Mail: {{email}}%0A
+Scrivere la nuova password: %0A%0A%0A
+Questa email è privata e non verrà condivisa con nessuno.%0ALa password verrà cambiata appena la mail sarà ricevuta.%0ASi riceverà una mail di conferma.%0A%0A
+Grazie.%0A%0A%0A
+Per informazioni:%0A
+Diblas Matteo%0A
+Classe 1DM - Marconi%0A%0A" class="password-lost-tooltip">Password dimenticata?</a></p>
+
+    <p class="sign-label">Digitare il nome utente e la password per firmare la presenza.</p>
+
+    <style type="text/css">
+        .sign-errors-label {
+            position: fixed;
+            top: 213px;
+            left: 30px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15;
+            color: #ff3d3d;
+            display: {{show_}};
+            -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 0.52.0.5 */
+            -moz-animation: fadein 0.5s; /* Firefox < 0.56 */
+            -ms-animation: fadein 0.5s; /* Internet Explorer */
+            -o-animation: fadein 0.5s; /* Opera < 0.52.0.5 */
+            animation: fadein 0.5s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+    <p class="sign-errors-label" id="sign-errors">{{errors}}</p>
+
+    <p class="showPasswordLabel">Mostra password</p>
+    <input class="passwordShow" type="checkbox" id="passwordShow" onclick="showPassword()">
+    <form method="post" action="">
+        <input name="username" class="username" type="text" id="username" placeholder="Username" autofocus>
+        <input name="password" class="password" type="password" id="password" placeholder="Password">
+        <input type="submit" name="action" value="Uscita anticipata" class="logout-button logout-button2">
+        <input class="sign-button sign-button2" type="submit" value="Firma" name="action">
+    </form>
+</body>

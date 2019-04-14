@@ -1,0 +1,123 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108834617-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108834617-4');
+    </script>
+
+    <title>Orari BEM | Supplencer</title>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="48x48" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="62x62" type="image/png">
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=0.65">
+    <h1 class="title">Supplencer</h1>
+    <img class="logo" src="{{ url_for('static', filename='media/logo.png') }}">
+    <p class="credits">by <a title="Se hai bisogno di aiuto, clicca qua!" href="mailto:matteo.diblas@isisbem.it">Matteo Diblas</a></p>
+    <p class="sign"><a class="sign" href="{{ url_for('sign') }}">Firma</a></p>
+    <hr class='bar'>
+    <p class="sign-label">Scegli una classe e scegli l'ora per trovare un docente libero.</p>
+    <form method="POST">
+        <select class="classes" name="classe">
+            <option value="1AF">1AF</option>
+            <option value="1AM">1AM</option>
+            <option value="1BF">1BF</option>
+            <option value="1BF">1BM</option>
+            <option value="1CM">1CM</option>
+            <option value="1DM">1DM</option>
+            <option value="2AF">2AF</option>
+            <option value="2AM">2AM</option>
+            <option value="2BF">2BF</option>
+            <option value="2BM">2BM</option>
+            <option value="2CM">2CM</option>
+            <option value="2DM">2DM</option>
+            <option value="3AF-RI">3AF-RI</option>
+            <option value="3AT-ET">3AT-ET</option>
+            <option value="3IA-EC">3IA-EC</option>
+            <option value="3LG">3LG</option>
+            <option value="4AF-SI">4AF-SI</option>
+            <option value="4AT-ET">4AT-ET</option>
+            <option value="4IA">4IA</option>
+            <option value="4LG">4LG</option>
+            <option value="4RI">4RI</option>
+            <option value="5AF-SI">5AF-SI</option>
+            <option value="5AT-ET">5AT-ET</option>
+            <option value="5IA">5IA</option>
+            <option value="5LG">5LG</option>
+            <option value="5RI">5RI</option>
+        </select>
+        <p class="classes-label">Classe:</p>
+        <select class="day" name="giorno" id="day" onchange="onBoxChange()">
+            <option value="1">Lunedì</option>
+            <option value="2">Martedì</option>
+            <option value="3">Mercoledì</option>
+            <option value="4">Giovedì</option>
+            <option value="5">Venerdì</option>
+        </select>
+        <p class="day-label">Giorno:</p>
+        <select class="hour" name="ora">
+            <option value="1">Prima Ora</option>
+            <option value="2">Seconda Ora</option>
+            <option value="3">Terza Ora</option>
+            <option value="4">Quarta Ora</option>
+            <option value="5">Quinta Ora</option>
+            <option value="6">Sesta Ora</option>
+        </select>
+        <p class="hour-label">Orario:</p>
+        <input class="search-button search-button2" type="submit" value="Cerca">
+    </form>
+    <p class="search-errors" id="search-errors">La ricerca dei supplenti per i giorni successivi<br>non è accurata come quella per il giorno stesso!</p>
+    <style type="text/css">
+        .search-errors-label {
+            position: fixed;
+            top: 275px;
+            left: 30px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 18;
+            color: {{color_}};
+            display: {{show_}};
+            -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 0.52.0.5 */
+            -moz-animation: fadein 0.5s; /* Firefox < 0.56 */
+            -ms-animation: fadein 0.5s; /* Internet Explorer */
+            -o-animation: fadein 0.5s; /* Opera < 0.52.0.5 */
+            animation: fadein 0.5s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+    <p class="search-errors-label" id="search-errors">{{text1}} {{text2}} <b>{{supplencer}}</b></p>
+    <p class="version">v1.0</p>
+</body>

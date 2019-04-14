@@ -1,0 +1,40 @@
+<head>
+    <title>Orari BEM | Supplencer - Firma</title>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="48x48" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}" sizes="62x62" type="image/png">
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=0.65">
+    <h1 class="login-title">Logout eseguito!</h1>
+    <hr class='bar'>
+    <a href="{{ url_for('index') }}" class="back_button"><i class="arrow-icon fas fa-arrow-left"></i></a>
+
+    <script type="text/javascript">
+        var count = 5;
+        var redirect = "{{ url_for('index') }}";
+        function countDown(){
+            var timer = document.getElementById("timer");
+            if(count > 1){
+                count--;
+                timer.innerHTML = "Sarete riportati alla pagina principale tra " + count + " secondi.";
+                setTimeout("countDown()", 1000);
+            }else{
+                window.location.href = redirect;
+            }
+        }
+    </script>
+    <span id="timer" class="signed-label">
+        <script type="text/javascript">countDown();</script>
+    </span>
+    <p class="signed-label"><br>Se non dovesse funzionare, premere l'icona della freccia indietro.</p>
+</body>
